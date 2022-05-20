@@ -5,4 +5,5 @@ import { Component } from '@angular/core'
   template: `<my-tabs></my-tabs>`
 })
 export class AppComponent {
+  
 }
