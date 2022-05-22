@@ -3,15 +3,14 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'my-tabs',
   template: `
-    <div>
-      <div>
+    <div class="tabs">
         <my-nav
+          class="my-nav"
           *ngFor="let tab of tabs; let i = index"
           [title]="tab?.title"
           [selected]="selectedTab?.title === tab?.title"
           (onSelection)="select($event)"
         ></my-nav>
-      </div>
       <my-tab
         [statement]="selectedTab?.statement"
       >
@@ -21,6 +20,11 @@ import { Component, Input } from '@angular/core';
   styles: [
     `
 
+
+    .my-nav {
+      display: inline-block;
+      margin: 10px;
+    }
     `,
   ],
 })

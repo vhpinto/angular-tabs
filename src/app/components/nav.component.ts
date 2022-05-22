@@ -3,16 +3,31 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'my-nav',
   template: `
-    <button
-      type="button"
+  <div class="nav">
+    <span
       (click)="select(title)"
     >
       {{ title }}
-    </button>
+    </span>
+  </div>
   `,
   styles: [
     `
+      .nav span {
+        text-decoration: none;
+        width: auto;
+        background-color: #053742;
+        color: #e8f0f2;
+        padding: 5px;
+        border: 1px solid #CCCCCC;
+        border-radius: 8px;
+      }
 
+      .nav span:hover {
+        color: #008080;
+        cursor: pointer;
+      }
+  
     `,
   ],
 })

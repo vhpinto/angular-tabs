@@ -40,7 +40,7 @@
         },
         {
             "name": "NavComponent",
-            "id": "component-NavComponent-a8a35c91bd1e8b88e45c79f1a03b3854a33dc39e78bfd2241760480c1fc3c5eccae9902bced39dd7c964b510a1ba2400046d32cae9b7f7fb18b9fc5396f9d35d",
+            "id": "component-NavComponent-34208076958d111408a8079084973a33dd48c62ddca50481046befdf895da36b02bb08d1e50571ad67818f15a8e3f1ad7f737d3e7c8a93068e3943277f75c7dc",
             "file": "src/app/components/nav.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -50,9 +50,9 @@
             "selector": "my-nav",
             "styleUrls": [],
             "styles": [
-                "\n\n    "
+                "\n      .nav span {\n        text-decoration: none;\n        width: auto;\n        background-color: #053742;\n        color: #e8f0f2;\n        padding: 5px;\n        border: 1px solid #CCCCCC;\n        border-radius: 8px;\n      }\n\n      .nav span:hover {\n        color: #008080;\n        cursor: pointer;\n      }\n  \n    "
             ],
-            "template": "<button\n  type=\"button\"\n  (click)=\"select(title)\"\n>\n  {{ title }}\n</button>\n",
+            "template": "<div class=\"nav\">\n  <span\n    (click)=\"select(title)\"\n  >\n    {{ title }}\n  </span>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -61,7 +61,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 36,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -70,7 +70,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 20,
+                    "line": 35,
                     "type": "string",
                     "decorators": []
                 }
@@ -81,7 +81,7 @@
                     "defaultValue": "new EventEmitter<string>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
+                    "line": 38,
                     "type": "EventEmitter"
                 }
             ],
@@ -101,7 +101,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 25,
+                    "line": 40,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -125,14 +125,14 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'my-nav',\r\n  template: `\r\n    <button\r\n      type=\"button\"\r\n      (click)=\"select(title)\"\r\n    >\r\n      {{ title }}\r\n    </button>\r\n  `,\r\n  styles: [\r\n    `\r\n\r\n    `,\r\n  ],\r\n})\r\nexport class NavComponent {\r\n  @Input('title') title?: string = '';\r\n  @Input('selected') selected?: boolean = false;\r\n\r\n  @Output('onSelection') onSelection = new EventEmitter<string>();\r\n\r\n  select(title?: string) {\r\n    this.onSelection.emit(title);\r\n  }\r\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'my-nav',\r\n  template: `\r\n  <div class=\"nav\">\r\n    <span\r\n      (click)=\"select(title)\"\r\n    >\r\n      {{ title }}\r\n    </span>\r\n  </div>\r\n  `,\r\n  styles: [\r\n    `\r\n      .nav span {\r\n        text-decoration: none;\r\n        width: auto;\r\n        background-color: #053742;\r\n        color: #e8f0f2;\r\n        padding: 5px;\r\n        border: 1px solid #CCCCCC;\r\n        border-radius: 8px;\r\n      }\r\n\r\n      .nav span:hover {\r\n        color: #008080;\r\n        cursor: pointer;\r\n      }\r\n  \r\n    `,\r\n  ],\r\n})\r\nexport class NavComponent {\r\n  @Input('title') title?: string = '';\r\n  @Input('selected') selected?: boolean = false;\r\n\r\n  @Output('onSelection') onSelection = new EventEmitter<string>();\r\n\r\n  select(title?: string) {\r\n    this.onSelection.emit(title);\r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n\n    \n"
+            "stylesData": "\n      .nav span {\n        text-decoration: none;\n        width: auto;\n        background-color: #053742;\n        color: #e8f0f2;\n        padding: 5px;\n        border: 1px solid #CCCCCC;\n        border-radius: 8px;\n      }\n\n      .nav span:hover {\n        color: #008080;\n        cursor: pointer;\n      }\n  \n    \n"
         },
         {
             "name": "TabComponent",
-            "id": "component-TabComponent-d6b2da4b57e89615ee892b728c6e02942b7b0543ed981d41e1819451b6567c289bd604227aa32fefe7e1683f5d5e748f34fefefb49885844325da600eea34baf",
+            "id": "component-TabComponent-861ff5cbe33469d6dc0a05d9a37b3fa9a947a0ebba0234bc7fa97d78c94432f10464fa53b7c0ad7b100d51a4d023e5b47fa859d505d485f03c7e8111b579a548",
             "file": "src/app/components/tab.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -142,9 +142,9 @@
             "selector": "my-tab",
             "styleUrls": [],
             "styles": [
-                "\n      \n    "
+                "\n    .tab {\n      width: 30%;\n      height: auto;\n      min-height: 400px;\n      background: #053742;\n      padding: 2rem 1rem;\n      color: #e8f0f2;\n      border-radius: 2rem;\n    }\n    "
             ],
-            "template": "<p>\n  {{ statement }}\n</p>\n",
+            "template": "<p class=\"tab\">\n  {{ statement }}\n</p>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -153,7 +153,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 25,
                     "type": "string",
                     "decorators": []
                 }
@@ -168,14 +168,14 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'my-tab',\r\n  template: `\r\n    <p>\r\n      {{ statement }}\r\n    </p>\r\n  `,\r\n  styles: [\r\n    `\r\n      \r\n    `,\r\n  ],\r\n})\r\nexport class TabComponent {\r\n  @Input('statement') statement?: string = '';\r\n}",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'my-tab',\r\n  template: `\r\n    <p class=\"tab\">\r\n      {{ statement }}\r\n    </p>\r\n  `,\r\n  styles: [\r\n    `\r\n    .tab {\r\n      width: 30%;\r\n      height: auto;\r\n      min-height: 400px;\r\n      background: #053742;\r\n      padding: 2rem 1rem;\r\n      color: #e8f0f2;\r\n      border-radius: 2rem;\r\n    }\r\n    `,\r\n  ],\r\n})\r\nexport class TabComponent {\r\n  @Input('statement') statement?: string = '';\r\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n      \n    \n"
+            "stylesData": "\n    .tab {\n      width: 30%;\n      height: auto;\n      min-height: 400px;\n      background: #053742;\n      padding: 2rem 1rem;\n      color: #e8f0f2;\n      border-radius: 2rem;\n    }\n    \n"
         },
         {
             "name": "TabsComponent",
-            "id": "component-TabsComponent-afd992165ca6f3c321a9b283790152b227df2fefacacd1bd8b77d6d837c308dea69a0ccec7537ebace049a48ea91f9dcca2f8867e8d413c12fa5bc36a7ae1242",
+            "id": "component-TabsComponent-5da8ca3eca2f4c71bae94a9f2e9a505b4b5add6b718c6da53ea2dd1c1cf8f84028a10899d3d8aa7a7526755a7fa6c6bf256afd461560127e2c59b4ef6bfb7a12",
             "file": "src/app/components/tabs.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -185,18 +185,18 @@
             "selector": "my-tabs",
             "styleUrls": [],
             "styles": [
-                "\n\n    "
+                "\n\n\n    .my-nav {\n      display: inline-block;\n      margin: 10px;\n    }\n    "
             ],
-            "template": "<div>\n  <div>\n    <my-nav\n      *ngFor=\"let tab of tabs; let i = index\"\n      [title]=\"tab?.title\"\n      [selected]=\"selectedTab?.title === tab?.title\"\n      (onSelection)=\"select($event)\"\n    ></my-nav>\n  </div>\n  <my-tab\n    [statement]=\"selectedTab?.statement\"\n  >\n  </my-tab>\n</div>\n",
+            "template": "<div class=\"tabs\">\n    <my-nav\n      class=\"my-nav\"\n      *ngFor=\"let tab of tabs; let i = index\"\n      [title]=\"tab?.title\"\n      [selected]=\"selectedTab?.title === tab?.title\"\n      (onSelection)=\"select($event)\"\n    ></my-nav>\n  <my-tab\n    [statement]=\"selectedTab?.statement\"\n  >\n  </my-tab>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
                     "name": "tabs",
-                    "defaultValue": "[\r\n    {\r\n      title: 'tab 1',\r\n      statement: 'Conteúdo da tab 1',\r\n    },\r\n    {\r\n      title: 'tab 2',\r\n      statement: 'Conteúdo da tab 2',\r\n    },\r\n    {\r\n      title: 'tab 3',\r\n      statement: 'Conteúdo da tab 3',\r\n    },\r\n    {\r\n      title: 'tab 4',\r\n      statement: 'Conteúdo da tab 4',\r\n    },\r\n  ]",
+                    "defaultValue": "[\r\n    {\r\n      title: 'Tab 1 title',\r\n      statement: 'Tab 1 content',\r\n    },\r\n    {\r\n      title: 'Tab 2 title',\r\n      statement: 'Tab 2 content',\r\n    },\r\n    {\r\n      title: 'Tab 3 title',\r\n      statement: 'Tab 3 content',\r\n    },\r\n    {\r\n      title: 'Tab 4 title',\r\n      statement: 'Tab 4 content',\r\n    },\r\n  ]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 28,
+                    "line": 32,
                     "type": "literal type[]",
                     "decorators": []
                 }
@@ -211,7 +211,7 @@
                     "type": "literal type",
                     "optional": true,
                     "description": "",
-                    "line": 47
+                    "line": 51
                 }
             ],
             "methodsClass": [
@@ -228,7 +228,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 49,
+                    "line": 53,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -251,10 +251,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'my-tabs',\r\n  template: `\r\n    <div>\r\n      <div>\r\n        <my-nav\r\n          *ngFor=\"let tab of tabs; let i = index\"\r\n          [title]=\"tab?.title\"\r\n          [selected]=\"selectedTab?.title === tab?.title\"\r\n          (onSelection)=\"select($event)\"\r\n        ></my-nav>\r\n      </div>\r\n      <my-tab\r\n        [statement]=\"selectedTab?.statement\"\r\n      >\r\n      </my-tab>\r\n    </div>\r\n  `,\r\n  styles: [\r\n    `\r\n\r\n    `,\r\n  ],\r\n})\r\nexport class TabsComponent {\r\n  @Input('tabs') tabs: {title: string, statement: string}[] = [\r\n    {\r\n      title: 'tab 1',\r\n      statement: 'Conteúdo da tab 1',\r\n    },\r\n    {\r\n      title: 'tab 2',\r\n      statement: 'Conteúdo da tab 2',\r\n    },\r\n    {\r\n      title: 'tab 3',\r\n      statement: 'Conteúdo da tab 3',\r\n    },\r\n    {\r\n      title: 'tab 4',\r\n      statement: 'Conteúdo da tab 4',\r\n    },\r\n  ];\r\n    \r\n  selectedTab?: {title: string, statement: string} = this.tabs[0];\r\n\r\n  select(title: string) {\r\n    const newSelectedTab = this.tabs.find((tab) => title === tab.title);\r\n    this.selectedTab = newSelectedTab;\r\n  }\r\n}",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'my-tabs',\r\n  template: `\r\n    <div class=\"tabs\">\r\n        <my-nav\r\n          class=\"my-nav\"\r\n          *ngFor=\"let tab of tabs; let i = index\"\r\n          [title]=\"tab?.title\"\r\n          [selected]=\"selectedTab?.title === tab?.title\"\r\n          (onSelection)=\"select($event)\"\r\n        ></my-nav>\r\n      <my-tab\r\n        [statement]=\"selectedTab?.statement\"\r\n      >\r\n      </my-tab>\r\n    </div>\r\n  `,\r\n  styles: [\r\n    `\r\n\r\n\r\n    .my-nav {\r\n      display: inline-block;\r\n      margin: 10px;\r\n    }\r\n    `,\r\n  ],\r\n})\r\nexport class TabsComponent {\r\n  @Input('tabs') tabs: {title: string, statement: string}[] = [\r\n    {\r\n      title: 'Tab 1 title',\r\n      statement: 'Tab 1 content',\r\n    },\r\n    {\r\n      title: 'Tab 2 title',\r\n      statement: 'Tab 2 content',\r\n    },\r\n    {\r\n      title: 'Tab 3 title',\r\n      statement: 'Tab 3 content',\r\n    },\r\n    {\r\n      title: 'Tab 4 title',\r\n      statement: 'Tab 4 content',\r\n    },\r\n  ];\r\n    \r\n  selectedTab?: {title: string, statement: string} = this.tabs[0];\r\n\r\n  select(title: string) {\r\n    const newSelectedTab = this.tabs.find((tab) => title === tab.title);\r\n    this.selectedTab = newSelectedTab;\r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n\n    \n"
+            "stylesData": "\n\n\n    .my-nav {\n      display: inline-block;\n      margin: 10px;\n    }\n    \n"
         }
     ],
     "modules": [
@@ -328,16 +328,6 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: false\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -345,14 +335,14 @@
                 "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
-                "name": "FirstStory",
+                "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Nav.stories.ts",
+                "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "FirstStory",
@@ -369,6 +359,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Tabs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "FirstStory",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Nav.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -387,16 +387,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Nav.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props:args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Tab.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -408,6 +398,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Tabs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\r\n  props:args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Nav.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -439,18 +439,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: false\r\n}"
-                }
-            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -463,26 +451,16 @@
                     "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ],
-            "src/stories/Nav.stories.ts": [
+            "src/environments/environment.ts": [
                 {
-                    "name": "FirstStory",
+                    "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Nav.stories.ts",
+                    "file": "src/environments/environment.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Nav.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props:args,\r\n})"
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
             "src/stories/Tab.stories.ts": [
@@ -523,6 +501,28 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/Tabs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props:args,\r\n})"
+                }
+            ],
+            "src/stories/Nav.stories.ts": [
+                {
+                    "name": "FirstStory",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Nav.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Nav.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",

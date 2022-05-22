@@ -11,7 +11,7 @@ export default {
   * See https://storybook.js.org/docs/angular/configure/overview#configure-story-loading
   * to learn how to generate automatic titles
   */
-  title: 'TabComponent',
+  title: 'Tabs/TabComponent',
   component: TabComponent,
 } as Meta;
 
